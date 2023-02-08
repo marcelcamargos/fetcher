@@ -51,4 +51,3 @@ class KingfisherService {
         prefetcher.start()
     }
 }
-

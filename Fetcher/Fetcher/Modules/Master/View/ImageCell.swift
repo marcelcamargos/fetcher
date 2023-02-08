@@ -37,7 +37,7 @@ class ImageCell: UICollectionViewCell {
     }
     
     func configure(_ url: Resource) {
-        photoImageView.kf.setImage(with: url)
+        photoImageView.kf.setImage(with: url, options: [.forceRefresh])
     }
     
     required init?(coder aDecoder: NSCoder) {
