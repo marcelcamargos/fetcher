@@ -1,5 +1,5 @@
 # Author
-Marcel Gonçalve Viana Marins de Camargos
+Marcel Gonçalves Viana Marins de Camargos
 
 # VIPER Architecture
 
