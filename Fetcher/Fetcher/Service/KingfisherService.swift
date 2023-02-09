@@ -46,7 +46,7 @@ class KingfisherService {
         
         let prefetcher = ImagePrefetcher(urls: urls) {
             skippedResources, failedResources, completedResources in
-            success(completedResources.isEmpty ? skippedResources : [])
+            success(completedResources.isEmpty ? skippedResources : completedResources)
         }
         prefetcher.start()
     }

@@ -15,8 +15,6 @@ protocol PresenterToViewMasterProtocol: AnyObject {
     func showHUD()
     func hideHUD()
     
-    //func deselectRowAt(row: Int)
-    
     func onGetImagesFromURLSuccess(resources: [Resource])
     func onGetImagesFromURLFailure()
 }

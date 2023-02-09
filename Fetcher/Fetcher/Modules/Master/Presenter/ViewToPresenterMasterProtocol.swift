@@ -25,6 +25,4 @@ protocol ViewToPresenterMasterProtocol: AnyObject {
     func getImageResource(indexPath: IndexPath) -> Resource
     
     func didSelectRowAt(uimage: UIImage, url: Resource)
-    //func deselectRowAt(index: Int)
-
 }

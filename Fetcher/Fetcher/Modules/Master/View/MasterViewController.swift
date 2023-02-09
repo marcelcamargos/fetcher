@@ -54,16 +54,6 @@ class MasterViewController: UIViewController {
         presenter?.viewDidLoad()
     }
     
-    // MARK:- Animation
-    func showFullImage(of image: UIImage) {
-        fullImageView.transform = CGAffineTransform(scaleX: 0, y: 0)
-        UIView.animate(withDuration: 0.5, delay: 0, options: [], animations:{
-            self.fullImageView.image = image
-            self.fullImageView.alpha = 1
-            self.fullImageView.transform = CGAffineTransform(scaleX: 1, y: 1)
-        }, completion: nil)
-    }
-    
     @objc func hideFullImage() {
         UIView.animate(withDuration: 0.5, delay: 0, options: [], animations:{
             self.fullImageView.alpha = 0
@@ -99,7 +89,6 @@ extension MasterViewController: UICollectionViewDataSource, UICollectionViewDele
         
         guard let cell = collectionView.cellForItem(at: indexPath) as? ImageCell,
               let image = cell.photoImageView.image else { return }
-        //self.showFullImage(of: image)
         guard let url = presenter?.getImageResource(indexPath: indexPath) else { return }
         presenter?.didSelectRowAt(uimage: image, url: url)
     }
@@ -125,10 +114,6 @@ extension MasterViewController: PresenterToViewMasterProtocol {
     func hideHUD() {
         HUD.hide()
     }
-    
-    //func deselectRowAt(row: Int) {
-        //self.tableView.deselectRow(at: IndexPath(row: row, section: 0), animated: true)
-    //}
     
     func onGetImagesFromURLSuccess(resources: [Resource]) {
         self.gridCollectionView.reloadData()
