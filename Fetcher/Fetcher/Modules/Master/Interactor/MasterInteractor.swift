@@ -37,7 +37,7 @@ class MasterInteractor: PresenterToInteractorMasterProtocol {
         for cat in cats.data ?? [] {
             for ct in cat.images ?? [] {
                 if ct.link == url.downloadURL.absoluteString {
-                    self.presenter?.getCatSuccess(uimage: uimage, name: cat.tags?[0].display_name ?? String())
+                    self.presenter?.getCatSuccess(uimage: uimage, name: cat.tags?.count ?? -1 > 0 ? cat.tags?[0].display_name ?? "" : "")
                 }
             }
         }
