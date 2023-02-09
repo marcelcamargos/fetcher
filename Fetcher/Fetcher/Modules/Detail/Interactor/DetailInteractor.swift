@@ -5,20 +5,17 @@
 //  Created by Marcel Camargos on 07/02/23.
 //
 
-import Foundation
+import UIKit
 
 class DetailInteractor: PresenterToInteractorDetailProtocol {
     
     // MARK: Properties
     weak var presenter: InteractorToPresenterDetailProtocol?
-    var cat: Cat?
+    var uimage: UIImage?
+    var name: String?
     
     func getImageDataFromURL() {
         print("Interactor receives the request from Presenter to get image data from the server.")
-        KingfisherService.shared.loadImageFrom(urlString: cat?.images?[0].link ?? "", success: { (data) in
-            self.presenter?.getImageFromURLSuccess(cat: self.cat ?? Cat(), data: data)
-        }) { (error) in
-            self.presenter?.getImageFromURLFailure(cat: self.cat ?? Cat())
-        }
+        self.presenter?.getImageFromURLSuccess(uiimage: uimage ?? UIImage(), name: name ?? String())
     }
 }

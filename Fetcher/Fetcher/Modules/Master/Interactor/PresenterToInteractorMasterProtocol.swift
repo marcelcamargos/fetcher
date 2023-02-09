@@ -5,7 +5,8 @@
 //  Created by Marcel Camargos on 07/02/23.
 //
 
-import Foundation
+import UIKit
+import Kingfisher
 
 // MARK: Interactor Input (Presenter -> Interactor)
 protocol PresenterToInteractorMasterProtocol: AnyObject {
@@ -13,6 +14,6 @@ protocol PresenterToInteractorMasterProtocol: AnyObject {
     var presenter: InteractorToPresenterMasterProtocol? { get set }
     
     func loadCats()
-    func retrieveCat(at index: Int)
+    func retrieveCat(uimage: UIImage, url: Resource)
     func getImageDataFromURLs(urls: [String])
 }

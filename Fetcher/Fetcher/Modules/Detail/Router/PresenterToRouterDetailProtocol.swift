@@ -10,5 +10,5 @@ import UIKit
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterDetailProtocol: AnyObject {
     
-    static func createModule(with cat: Cat) -> UIViewController
+    static func createModule(uimage: UIImage, name: String) -> UIViewController
 }

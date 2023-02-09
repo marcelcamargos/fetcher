@@ -10,7 +10,7 @@ import UIKit
 class DetailRouter: PresenterToRouterDetailProtocol {
     
     // MARK: Static methods
-    static func createModule(with cat: Cat) -> UIViewController {
+    static func createModule(uimage: UIImage, name: String) -> UIViewController {
         print("DetailRouter creates the Detail module.")
         let viewController = DetailViewController()
         
@@ -20,7 +20,8 @@ class DetailRouter: PresenterToRouterDetailProtocol {
         viewController.presenter?.router = DetailRouter()
         viewController.presenter?.view = viewController
         viewController.presenter?.interactor = DetailInteractor()
-        viewController.presenter?.interactor?.cat = cat
+        viewController.presenter?.interactor?.uimage = uimage
+        viewController.presenter?.interactor?.name = name
         viewController.presenter?.interactor?.presenter = presenter
         
         return viewController

@@ -28,9 +28,9 @@ class MasterRouter: PresenterToRouterMasterProtocol {
     }
     
     // MARK: - Navigation
-    func pushToCatDetail(on view: PresenterToViewMasterProtocol, with cat: Cat) {
+    func pushToCatDetail(on view: PresenterToViewMasterProtocol, uimage: UIImage, name: String) {
         print("CatsRouter is instructed to push DetailViewController onto the navigation stack.")
-        let detailViewController = DetailRouter.createModule(with: cat)
+        let detailViewController = DetailRouter.createModule(uimage: uimage, name: name)
 
         let viewController = view as? MasterViewController
         viewController?.navigationController?.pushViewController(detailViewController, animated: true)

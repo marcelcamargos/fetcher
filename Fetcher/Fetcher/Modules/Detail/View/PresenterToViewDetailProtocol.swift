@@ -10,6 +10,6 @@ import UIKit
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewDetailProtocol: AnyObject {
     
-    func onGetImageFromURLSuccess(_ catName: String, image: UIImage)
+    func onGetImageFromURLSuccess(uiimage: UIImage, name: String)
     func onGetImageFromURLFailure(_ catName: String)
 }

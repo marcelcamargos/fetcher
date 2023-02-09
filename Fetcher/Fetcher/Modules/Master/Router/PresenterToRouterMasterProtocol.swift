@@ -12,5 +12,5 @@ protocol PresenterToRouterMasterProtocol: AnyObject {
     
     static func createModule() -> UINavigationController
     
-    func pushToCatDetail(on view: PresenterToViewMasterProtocol, with cat: Cat)
+    func pushToCatDetail(on view: PresenterToViewMasterProtocol, uimage: UIImage, name: String)
 }

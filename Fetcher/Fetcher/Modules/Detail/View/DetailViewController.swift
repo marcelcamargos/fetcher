@@ -23,22 +23,24 @@ class DetailViewController: UIViewController {
     lazy var characterImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     lazy var catNameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 }
 
 extension DetailViewController: PresenterToViewDetailProtocol {
     
-    func onGetImageFromURLSuccess(_ catName: String, image: UIImage) {
+    func onGetImageFromURLSuccess(uiimage: UIImage, name: String) {
         print("View receives the response from Presenter and updates itself.")
-        catNameLabel.text = catName
-        characterImageView.image = image
+        catNameLabel.text = name
+        characterImageView.image = uiimage
     }
     
     func onGetImageFromURLFailure(_ catName: String) {
@@ -58,15 +60,13 @@ extension DetailViewController {
         self.view.addSubview(catNameLabel)
         
         let widthHeightConstant = self.view.frame.width * 0.8
-        characterImageView.translatesAutoresizingMaskIntoConstraints = false
+        
         characterImageView.widthAnchor.constraint(equalToConstant: widthHeightConstant).isActive = true
         characterImageView.heightAnchor.constraint(equalToConstant: widthHeightConstant).isActive = true
         characterImageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
         characterImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         
-        catNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        catNameLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        catNameLabel.topAnchor.constraint(equalTo: characterImageView.bottomAnchor).isActive = true
+        catNameLabel.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: 20).isActive = true
         catNameLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
 }

@@ -5,11 +5,11 @@
 //  Created by Marcel Camargos on 08/02/23.
 //
 
-import Foundation
+import UIKit
 
 // MARK: Interactor Output (Interactor -> Presenter)
 protocol InteractorToPresenterDetailProtocol: AnyObject {
     
-    func getImageFromURLSuccess(cat: Cat, data: Data?)
+    func getImageFromURLSuccess(uiimage: UIImage, name: String)
     func getImageFromURLFailure(cat: Cat)
 }

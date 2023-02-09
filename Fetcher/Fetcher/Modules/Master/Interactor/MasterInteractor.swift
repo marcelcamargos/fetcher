@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Kingfisher
 
 class MasterInteractor: PresenterToInteractorMasterProtocol {
     
@@ -28,12 +29,18 @@ class MasterInteractor: PresenterToInteractorMasterProtocol {
         }
     }
     
-    func retrieveCat(at index: Int) {
-        guard let cats = self.cats, ((cats.data?.indices.contains(index)) != nil) else {
+    func retrieveCat(uimage: UIImage, url: Resource) {
+        guard let cats = self.cats else {
             self.presenter?.getCatFailure()
             return
         }
-        self.presenter?.getCatSuccess(self.cats?.data?[index] ?? Cat())
+        for cat in cats.data ?? [] {
+            for ct in cat.images ?? [] {
+                if ct.link == url.downloadURL.absoluteString {
+                    self.presenter?.getCatSuccess(uimage: uimage, name: cat.tags?[0].display_name ?? String())
+                }
+            }
+        }
     }
     
     func getImageDataFromURLs(urls: [String]) {

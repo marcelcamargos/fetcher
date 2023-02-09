@@ -24,7 +24,7 @@ protocol ViewToPresenterMasterProtocol: AnyObject {
     func numberOfRowsInSection() -> Int
     func getImageResource(indexPath: IndexPath) -> Resource
     
-    func didSelectRowAt(index: Int)
+    func didSelectRowAt(uimage: UIImage, url: Resource)
     //func deselectRowAt(index: Int)
 
 }

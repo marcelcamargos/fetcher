@@ -13,7 +13,7 @@ protocol InteractorToPresenterMasterProtocol: AnyObject {
     func fetchCatsSuccess(cats: Cats)
     func fetchCatsFailure(errorCode: Int)
     
-    func getCatSuccess(_ cat: Cat)
+    func getCatSuccess(uimage: UIImage, name: String)
     func getCatFailure()
     
     func getImageFromURLSuccess(resources: [Resource])

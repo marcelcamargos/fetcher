@@ -100,7 +100,8 @@ extension MasterViewController: UICollectionViewDataSource, UICollectionViewDele
         guard let cell = collectionView.cellForItem(at: indexPath) as? ImageCell,
               let image = cell.photoImageView.image else { return }
         //self.showFullImage(of: image)
-        presenter?.didSelectRowAt(index: indexPath.row)
+        guard let url = presenter?.getImageResource(indexPath: indexPath) else { return }
+        presenter?.didSelectRowAt(uimage: image, url: url)
     }
 }
 

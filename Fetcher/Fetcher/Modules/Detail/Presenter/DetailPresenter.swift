@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class DetailPresenter: ViewToPresenterDetailProtocol {
 
@@ -22,10 +23,10 @@ class DetailPresenter: ViewToPresenterDetailProtocol {
 
 extension DetailPresenter: InteractorToPresenterDetailProtocol {
     
-    func getImageFromURLSuccess(cat: Cat, data: Data?) {
+    func getImageFromURLSuccess(uiimage: UIImage, name: String) {
         print("Presenter receives the result from Interactor after it's done its job.")
 
-        view?.onGetImageFromURLSuccess(!(cat.tags?.isEmpty ?? true) ? (cat.tags?[0].display_name ?? "") : "", image: CatDataService.shared.convertToUIImage(from: data ?? Data()))
+        view?.onGetImageFromURLSuccess(uiimage: uiimage, name: name)
     }
     
     func getImageFromURLFailure(cat: Cat) {

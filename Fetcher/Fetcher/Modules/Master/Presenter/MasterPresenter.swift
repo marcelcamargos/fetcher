@@ -50,8 +50,8 @@ class MasterPresenter: ViewToPresenterMasterProtocol {
         return resources[indexPath.row]
     }
     
-    func didSelectRowAt(index: Int) {
-        interactor?.retrieveCat(at: index)
+    func didSelectRowAt(uimage: UIImage, url: Resource) {
+        interactor?.retrieveCat(uimage: uimage, url: url)
     }
     
 //    func deselectRowAt(index: Int) {
@@ -81,8 +81,8 @@ extension MasterPresenter: InteractorToPresenterMasterProtocol {
         view?.onFetchMasterFailure(error: "Couldn't fetch cats: \(errorCode)")
     }
     
-    func getCatSuccess(_ cat: Cat) {
-        router?.pushToCatDetail(on: view ?? MasterViewController(), with: cat)
+    func getCatSuccess(uimage: UIImage, name: String) {
+        router?.pushToCatDetail(on: view ?? MasterViewController(), uimage: uimage, name: name)
     }
     
     func getCatFailure() {
