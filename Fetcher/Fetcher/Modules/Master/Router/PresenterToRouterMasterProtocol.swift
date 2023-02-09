@@ -12,5 +12,5 @@ protocol PresenterToRouterMasterProtocol: AnyObject {
     
     static func createModule() -> UINavigationController
     
-    //func pushToQuoteDetail(on view: PresenterToViewMasterProtocol, with quote: Cat)
+    func pushToCatDetail(on view: PresenterToViewMasterProtocol, with cat: Cat)
 }

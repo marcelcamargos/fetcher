@@ -28,11 +28,11 @@ class MasterRouter: PresenterToRouterMasterProtocol {
     }
     
     // MARK: - Navigation
-//    func pushToQuoteDetail(on view: PresenterToViewMasterProtocol, with quote: Quote) {
-//        print("QuotesRouter is instructed to push QuoteDetailViewController onto the navigation stack.")
-//        let quoteDetailViewController = QuoteDetailRouter.createModule(with: quote)
-//
-//        let viewController = view as? QuotesViewController
-//        viewController?.navigationController?.pushViewController(quoteDetailViewController, animated: true)
-//    }
+    func pushToCatDetail(on view: PresenterToViewMasterProtocol, with cat: Cat) {
+        print("CatsRouter is instructed to push DetailViewController onto the navigation stack.")
+        let detailViewController = DetailRouter.createModule(with: cat)
+
+        let viewController = view as? MasterViewController
+        viewController?.navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }

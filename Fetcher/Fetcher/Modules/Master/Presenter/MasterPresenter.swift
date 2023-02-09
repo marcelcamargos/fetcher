@@ -78,11 +78,11 @@ extension MasterPresenter: InteractorToPresenterMasterProtocol {
     func fetchCatsFailure(errorCode: Int) {
         print("Presenter receives the result from Interactor after it's done its job.")
         view?.hideHUD()
-        view?.onFetchMasterFailure(error: "Couldn't fetch quotes: \(errorCode)")
+        view?.onFetchMasterFailure(error: "Couldn't fetch cats: \(errorCode)")
     }
     
-    func getCatSuccess(_ quote: Cat) {
-        //router?.pushToQuoteDetail(on: view ?? MasterViewController(), with: quote)
+    func getCatSuccess(_ cat: Cat) {
+        router?.pushToCatDetail(on: view ?? MasterViewController(), with: cat)
     }
     
     func getCatFailure() {

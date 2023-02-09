@@ -19,10 +19,10 @@ class MasterInteractor: PresenterToInteractorMasterProtocol {
     }
     
     func loadCats() {
-        print("Interactor receives the request from Presenter to load quotes from the server.")
-        CatService.shared.getCats(count: 6, success: { (code, quotes) in
-            self.cats = quotes
-            self.presenter?.fetchCatsSuccess(cats: quotes)
+        print("Interactor receives the request from Presenter to load cats from the server.")
+        CatService.shared.getCats(count: 6, success: { (code, cats) in
+            self.cats = cats
+            self.presenter?.fetchCatsSuccess(cats: cats)
         }) { (code) in
             self.presenter?.fetchCatsFailure(errorCode: code)
         }

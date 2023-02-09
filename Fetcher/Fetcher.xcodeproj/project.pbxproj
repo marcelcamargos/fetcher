@@ -37,6 +37,11 @@
 		101CE4F02993167C00B7A9FC /* PresenterToRouterMasterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101CE4EF2993167C00B7A9FC /* PresenterToRouterMasterProtocol.swift */; };
 		101CE4F2299316FA00B7A9FC /* PresenterToViewMasterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101CE4F1299316FA00B7A9FC /* PresenterToViewMasterProtocol.swift */; };
 		101CE4F42993517500B7A9FC /* Cats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101CE4F32993517500B7A9FC /* Cats.swift */; };
+		1030DDB329945D7E0050CB00 /* ViewToPresenterDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1030DDB229945D7E0050CB00 /* ViewToPresenterDetailProtocol.swift */; };
+		1030DDB529945D990050CB00 /* InteractorToPresenterDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1030DDB429945D990050CB00 /* InteractorToPresenterDetailProtocol.swift */; };
+		1030DDB729945DC10050CB00 /* PresenterToInteractorDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1030DDB629945DC10050CB00 /* PresenterToInteractorDetailProtocol.swift */; };
+		1030DDB929945E0B0050CB00 /* PresenterToRouterDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1030DDB829945E0B0050CB00 /* PresenterToRouterDetailProtocol.swift */; };
+		1030DDBB29945E240050CB00 /* PresenterToViewDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1030DDBA29945E240050CB00 /* PresenterToViewDetailProtocol.swift */; };
 		9D40BC70A66ABCAFE0C41296 /* Pods_FetcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC540811C4D1D4777F33A18C /* Pods_FetcherTests.framework */; };
 		F54698471D5598ADB7CCD6AF /* Pods_Fetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BE21CDDCD3EB82E6CFD54D /* Pods_Fetcher.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +90,11 @@
 		101CE4EF2993167C00B7A9FC /* PresenterToRouterMasterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterToRouterMasterProtocol.swift; sourceTree = "<group>"; };
 		101CE4F1299316FA00B7A9FC /* PresenterToViewMasterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterToViewMasterProtocol.swift; sourceTree = "<group>"; };
 		101CE4F32993517500B7A9FC /* Cats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cats.swift; sourceTree = "<group>"; };
+		1030DDB229945D7E0050CB00 /* ViewToPresenterDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToPresenterDetailProtocol.swift; sourceTree = "<group>"; };
+		1030DDB429945D990050CB00 /* InteractorToPresenterDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorToPresenterDetailProtocol.swift; sourceTree = "<group>"; };
+		1030DDB629945DC10050CB00 /* PresenterToInteractorDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterToInteractorDetailProtocol.swift; sourceTree = "<group>"; };
+		1030DDB829945E0B0050CB00 /* PresenterToRouterDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterToRouterDetailProtocol.swift; sourceTree = "<group>"; };
+		1030DDBA29945E240050CB00 /* PresenterToViewDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterToViewDetailProtocol.swift; sourceTree = "<group>"; };
 		28BE21CDDCD3EB82E6CFD54D /* Pods_Fetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B7768975711A724F5FF37D /* Pods-FetcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetcherTests.debug.xcconfig"; path = "Target Support Files/Pods-FetcherTests/Pods-FetcherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68A024E55010D006AC1777B2 /* Pods-FetcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetcherTests.release.xcconfig"; path = "Target Support Files/Pods-FetcherTests/Pods-FetcherTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				101CE4CF2992CD7F00B7A9FC /* DetailInteractor.swift */,
+				1030DDB629945DC10050CB00 /* PresenterToInteractorDetailProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -236,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				101CE4CD2992CD7100B7A9FC /* DetailRouter.swift */,
+				1030DDB829945E0B0050CB00 /* PresenterToRouterDetailProtocol.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -244,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				101CE4CB2992CD2C00B7A9FC /* DetailViewController.swift */,
+				1030DDBA29945E240050CB00 /* PresenterToViewDetailProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				101CE4C92992CD1E00B7A9FC /* DetailPresenter.swift */,
+				1030DDB229945D7E0050CB00 /* ViewToPresenterDetailProtocol.swift */,
+				1030DDB429945D990050CB00 /* InteractorToPresenterDetailProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -502,6 +517,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				101CE4C82992CD0D00B7A9FC /* MasterInteractor.swift in Sources */,
+				1030DDBB29945E240050CB00 /* PresenterToViewDetailProtocol.swift in Sources */,
+				1030DDB929945E0B0050CB00 /* PresenterToRouterDetailProtocol.swift in Sources */,
 				101CE4D82992CEA900B7A9FC /* APIClient.swift in Sources */,
 				101CE4D02992CD7F00B7A9FC /* DetailInteractor.swift in Sources */,
 				101CE4C62992CCEF00B7A9FC /* MasterViewController.swift in Sources */,
@@ -518,10 +535,13 @@
 				101CE4812991CD5C00B7A9FC /* AppDelegate.swift in Sources */,
 				101CE4C42992CCDD00B7A9FC /* MasterRouter.swift in Sources */,
 				101CE4E8299310D900B7A9FC /* GridLayout.swift in Sources */,
+				1030DDB529945D990050CB00 /* InteractorToPresenterDetailProtocol.swift in Sources */,
 				101CE4CA2992CD1E00B7A9FC /* DetailPresenter.swift in Sources */,
+				1030DDB729945DC10050CB00 /* PresenterToInteractorDetailProtocol.swift in Sources */,
 				101CE4EE2993161C00B7A9FC /* InteractorToPresenterMasterProtocol.swift in Sources */,
 				101CE4CE2992CD7100B7A9FC /* DetailRouter.swift in Sources */,
 				101CE4832991CD5C00B7A9FC /* SceneDelegate.swift in Sources */,
+				1030DDB329945D7E0050CB00 /* ViewToPresenterDetailProtocol.swift in Sources */,
 				101CE4D62992CE9800B7A9FC /* APIManager.swift in Sources */,
 				101CE4E22992F71100B7A9FC /* CatDataService.swift in Sources */,
 				101CE4DA2992DF9D00B7A9FC /* Tag.swift in Sources */,
